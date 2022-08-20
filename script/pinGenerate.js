@@ -1,5 +1,6 @@
 // connect to the pin generate button
 
+//this function is for ensure the pin is 4 dijit or not.and make thi pin 4 dijit.
 function fourDijitPin() {
     const originalPin = randomPin();
     const makePinFourDijit = Math.round(originalPin);
@@ -12,6 +13,7 @@ function fourDijitPin() {
     }
 }
 
+// this function is for generate random pin.
 function randomPin() {
     const pin = Math.random() * 10000;
     return pin;
@@ -25,6 +27,7 @@ document.getElementById("pinGenerateBtn").addEventListener("click", function () 
 });
 
 
+//set value in input display and delet it and remove it from last charecter
 document.getElementById("allButton").addEventListener("click", function (event) {
     const getNumber = event.target.innerText;
     const setValueDisplay = document.getElementById("pinMatchInput");
